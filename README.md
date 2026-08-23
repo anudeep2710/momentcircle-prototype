@@ -34,7 +34,7 @@ The debug APK is produced at `build/app/outputs/flutter-apk/app-debug.apk`.
 
 ### Download a release APK
 
-The shareable Android artifacts are published at [MomentCircle v0.1.0](https://github.com/anudeep2710/momentcircle-prototype/releases/tag/v0.1.0). For a current iQOO/ARM64 phone, download `app-arm64-v8a-release.apk`.
+The shareable Android artifacts are published at [MomentCircle v0.1.1](https://github.com/anudeep2710/momentcircle-prototype/releases/tag/v0.1.1). For a current iQOO/ARM64 phone, download `app-arm64-v8a-release.apk`.
 
 ## Three-minute walkthrough
 
