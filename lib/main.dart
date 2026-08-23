@@ -583,10 +583,11 @@ class _MomentCircleShellState extends State<MomentCircleShell> {
       DemoStep.confirm => _buildConfirmStep(),
       DemoStep.delete => _buildDeleteStep(),
     };
-    return AnimatedSwitcher(
-      duration: const Duration(milliseconds: 260),
-      child: KeyedSubtree(key: ValueKey(_step), child: child),
-    );
+    // Keep the active step as a single hit-testable subtree on Android.
+    // AnimatedSwitcher can leave an outgoing Flutter semantics node with a
+    // zero-sized bound after a long scroll, making the newly painted action
+    // button impossible to activate through touch or accessibility tooling.
+    return KeyedSubtree(key: ValueKey(_step), child: child);
   }
 
   Widget _buildCreateStep() {
